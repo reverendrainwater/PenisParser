@@ -1,9 +1,9 @@
-puts "naame of file: "
+puts "name of file: "
 filename = gets
-text = File.open(filename.chomp, "r+").read
-_penis = "penis"
-_count = 0
-text.each_char do |line|
-   if _count % 5 == 0
+data = File.read(filename.chomp)
+filtered_data = data.gsub(/\w+/, "penis")
 
-    _count += 1
+File.open(filename.chomp , "w") do |f|
+    f.write(filtered_data)
+end
+
