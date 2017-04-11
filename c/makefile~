@@ -1,2 +1,0 @@
-penis.c:
-	gcc penis.c -o penis
