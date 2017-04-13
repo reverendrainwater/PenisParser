@@ -22,7 +22,7 @@ int main(int argc, char * argv[])
 	int word_lines = word_count / newline_count;
 	while(word_count > -1){
 	    for (i = word_lines; i > -1; i--){
-			if (word_count > -1) printf("penis++ ");
+			if (word_count > -1) printf("penis ");
 			word_count--;
 		}
 		printf("\n");
