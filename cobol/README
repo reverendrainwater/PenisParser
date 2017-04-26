@@ -1,0 +1,8 @@
+YOU NEED COBC TO COMPILE AND LINK
+
+ONLY THE FILE input.txt CAN BE USED
+
+USAGE:
+	$ make
+	$ make penis
+	$ ./penis
