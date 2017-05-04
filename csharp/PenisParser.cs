@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 public class PenisParser
 {
-	public static void Main(string[] args)
+    public static void Main(string[] args)
     {
         // Checks if there's only one command line argument
         if (args.Length != 1)
