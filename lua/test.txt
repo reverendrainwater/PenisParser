@@ -1,0 +1,13 @@
+This is a test file.
+
+This lua program is essentially as simple as can be.
+
+It does not take into account specific exceptions.
+
+"I've" for example, turns into penis'penis, because "I've" is not recognized as a word with the "(%w+)" selector.
+
+Thanks,
+
+ImFalling.
+
+
