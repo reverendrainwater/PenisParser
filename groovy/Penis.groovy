@@ -5,4 +5,9 @@ if (this.args.length < 1) {
 
 file = new File(this.args[0])
 
+if (!file.exists()) {
+    println("real filename pls")
+    return
+}
+
 file.text = file.text.replaceAll "[a-zA-Z0-9]+", "penis"
