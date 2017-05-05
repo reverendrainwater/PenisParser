@@ -10,4 +10,4 @@ if (!file.exists()) {
     return
 }
 
-file.text = file.text.replaceAll "[a-zA-Z0-9]+", "penis"
+file.text = file.text.replaceAll "\\S+", "penis"
