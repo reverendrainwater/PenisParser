@@ -4,4 +4,4 @@ import Text.Regex
 main :: IO()
 main = do
   contents <- readFile "text.txt"
-  putStrLn $ subRegex (mkRegex "[a-zA-Z0-0]+") contents "penis"
+  putStrLn $ subRegex (mkRegex "[a-zA-Z0-9]+") contents "penis"
