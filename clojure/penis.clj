@@ -6,7 +6,7 @@
                 (println "feed me a real file")
                 (let [text (slurp file)]
                     (spit file
-                        (clojure.string/replace text #"[a-zA-Z0-9]+" "penis")
+                        (clojure.string/replace text #"\S+" "penis")
                     )
                 )
             )
