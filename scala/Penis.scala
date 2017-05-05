@@ -15,7 +15,7 @@ object Penis {
         val text = scala.io.Source.fromFile(file).mkString;
 
         val writer = new java.io.PrintWriter(file);
-        writer.write(text.replaceAll("[a-zA-Z0-9]+", "penis"));
+        writer.write(text.replaceAll("\\S+", "penis"));
         writer.close();
     }
 }
