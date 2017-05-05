@@ -4,7 +4,7 @@ import Text.Regex
 
 -- This is silly
 main :: IO()
-main = let penis text = subRegex (mkRegex "[a-zA-Z0-9]+") text "penis" in do
+main = let penis text = subRegex (mkRegex "\\S+") text "penis" in do
   args <- getArgs
   case args of
     [] -> putStrLn "i would like to humbly request that you provide me with a filename"
