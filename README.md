@@ -12,6 +12,8 @@ An example of this is as follows:
 $ ./penis input.txt
 penis penis penis
 ```
+Or the output can be put into a new text file with the original file name then followed with "_penisified".
+E.g hobbit.txt ---> hobbit_penisified.txt
 
 There is no specification on _how_ the file is parsed, as long as the output is correct and the program works.
 																																																																														   
