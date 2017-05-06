@@ -6,10 +6,16 @@ object Penis {
         }
 
         val file = new java.io.File(penis(0));
+
+        if (!file.exists) {
+            println("GIVE ME A REAL FILE TO FUCK UP");
+            return;
+        }
+
         val text = scala.io.Source.fromFile(file).mkString;
 
         val writer = new java.io.PrintWriter(file);
-        writer.write(text.replaceAll("[a-zA-Z0-9]+", "penis"));
+        writer.write(text.replaceAll("\\S+", "penis"));
         writer.close();
     }
 }
