@@ -9,8 +9,8 @@ const translateUrl = "api/translate";
 const baseCode = "en";
 const word ="penis";
 
-const languagesPath = "./languages.txt"
-const cachePath = "./cache.txt";
+const languagesPath = "./languages.json"
+const cachePath = "./cache.json";
 
 let data = "";
 let cache = [];
