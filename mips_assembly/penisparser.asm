@@ -12,6 +12,9 @@ buf: .space 1
 
 .text
 main:
+	addi $a0, $a0, -1 # Checks if there's exactly one command line argument
+	bne $a0, $zero, only_one_arg
+
 	li $v0, 13	# Opens input file for reading
 	lw $a0, 0($a1)
 	li $a1, 0
