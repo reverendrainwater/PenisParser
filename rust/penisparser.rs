@@ -8,9 +8,10 @@ fn main() {
         // reading into a string
         let mut contents = String::new();
         let mut file = File::open(&arg1).expect("opening the file failed");
-        file.read_to_string(&mut contents).expect("reading the file failed");
+        file.read_to_string(&mut contents)
+            .expect("reading the file failed");
 
-        // printing 
+        // printing
         for line in contents.split("\n").collect::<Vec<&str>>() {
             for word in line.split(" ").collect::<Vec<&str>>() {
                 if word.trim() != "" {
@@ -18,8 +19,7 @@ fn main() {
                 }
             }
         }
-    }
-    else {
+    } else {
         println!("pass a path to a file as an argument")
     }
 }
