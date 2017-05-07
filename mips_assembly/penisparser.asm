@@ -30,7 +30,7 @@ main:
 	
 	li $s2, 0x20
 	
-read_loop: 	# Loops through every character and writes penis when appropriate
+read_loop: # Loops through every character and writes penis when appropriate
 	li $v0, 14	# Reads 1 character from input file
 	move $a0, $s0
 	la $a1, buf
@@ -39,6 +39,8 @@ read_loop: 	# Loops through every character and writes penis when appropriate
 	
 	beqz $v0, end	# End of file
 	blt $v0, $zero, exit_error # Error
+	
+	lb $s3, 0($a1)	# $a1 already has the address to the buffer
 	
 	# Here's the interesting part:
 	# For this part, I will refer to a character as anything but whitespace
@@ -49,11 +51,9 @@ read_loop: 	# Loops through every character and writes penis when appropriate
 	# - If we have a whitespace before a whitespace, write just the whitespace
 	# - If we reach the end of the file and the previous character is a character,
 	#   write penis
-	# - If we reach the end of file and the a whitespace was before it, do nothing
-	
-	lb $s3, 0($a1)	# $a1 already has the address to the buffer
+	# - If we reach the end of file and a whitespace was before it, do nothing
 
-character: 	# Deals with characters
+character: # Deals with characters
 	ble $s3, 0x20, whitespace # You're a whitespace GTFO
 	move $s2, $s3
 	j read_loop
@@ -64,10 +64,12 @@ whitespace: # Deals with whitespace
 
 w_w:	# Whitespace before whitespace
 	li $v0, 15 	# Write whitespace to the output file
+	move $a0, $s1
 	la $a1, buf
 	li $a2, 1
 	syscall
 	bne $v0, 1, exit_error # Must write exactly 1 whitespace, error otherwise
+	move $s2, $s3
 	j read_loop
 
 write_penis: # Write penis to the output file
