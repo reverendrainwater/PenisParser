@@ -7,7 +7,6 @@ import java.nio.file.Paths;
 public class PenisParser3 {
 
     public static void main(String[] args) {
-
         if (args.length > 0) {
             try {
                 Files.readAllLines(Paths.get(args[0])).forEach(line -> System.out.print(line.replaceAll("(\\w+)", "penis")));

@@ -1,0 +1,8 @@
+This parses a file using Go and prints out "penis" for each word found.
+
+Regex currently matches anything that is a "word" which includes things within punctuation.
+Planning on stripping mid-word punctuation or finding a better pattern.
+
+You can execute it by downloading and installing the Go runtime from here https://golang.org/dl/ then "go build" and run the executable.
+
+Usage: ./parser filename.txt
