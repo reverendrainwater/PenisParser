@@ -1,0 +1,5 @@
+This is a Java implementation of the parser, particularly using some Java 8 functionality.
+
+Usage: java PenisParser3 filename.txt
+
+Compile it first tho
