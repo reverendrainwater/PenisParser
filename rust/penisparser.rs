@@ -7,15 +7,18 @@ fn main() {
 
         // reading into a string
         let mut contents = String::new();
-        let mut file = File::open(&arg1).expect("opening the file failed");
+        let mut file = File::open(&arg1).ok().expect("opening the file failed");
         file.read_to_string(&mut contents)
+            .ok()
             .expect("reading the file failed");
 
         // printing
         for line in contents.split("\n").collect::<Vec<&str>>() {
-            for word in line.split(" ").collect::<Vec<&str>>() {
-                if word.trim() != "" {
-                    println!("penis")
+            for tabbedword in line.split(" ").collect::<Vec<&str>>() {
+                for actualword in tabbedword.split("\t").collect::<Vec<&str>>() {
+                    if actualword.trim() != "" {
+                        println!("penis")
+                    }
                 }
             }
         }
