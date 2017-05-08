@@ -21,8 +21,6 @@ hobbit_penisified.txt
 
 ## Regulatory Stuff
 
-Firstly, **if you do not provide a README then you are stupid and your pull will be rejected until a README is provided**.
-
 There is no specification on _how_ the file is parsed, as long as the output is correct and the program works.
 														   
 If you do not see an implementation of a language already, please feel free to add the language but create a directory for the language. _Please name the directory the language it contains_.
