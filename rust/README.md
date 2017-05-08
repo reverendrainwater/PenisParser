@@ -10,4 +10,4 @@ This binary file is already included, so it should be possible to test this with
 $ ./penisparser textfile.txt
 ```
 
-and it will print penis for every word in your original textfile, to write it into a file.
+and it will print penis for every word in your original textfile.
