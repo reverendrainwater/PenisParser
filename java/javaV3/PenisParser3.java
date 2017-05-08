@@ -15,6 +15,6 @@ public class PenisParser3 {
             }
         } else {
             System.out.println("You should probably enter a file name");
-        }        
+        }
     }
 }
