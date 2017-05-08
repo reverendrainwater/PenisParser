@@ -1,0 +1,31 @@
+using System;
+using System.IO;
+using System.Text.RegularExpressions;
+
+namespace ReplaceAllText
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Toss me a file path...");
+
+            var fileName = Console.ReadLine();
+
+            if (fileName == "" || fileName == null)
+            {
+                Console.WriteLine("You need to include a file path you dunce. Try running this again.");
+                Console.WriteLine("Press any key to terminate.");
+                Console.ReadKey();
+
+                return;
+            }
+
+            File.WriteAllText(fileName, Regex.Replace(File.ReadAllText(fileName), "\\S+", "penis"));
+
+            Console.WriteLine("Done!");
+            Console.WriteLine("Press any key to terminate.");
+            Console.ReadKey();
+        }
+    }
+}
