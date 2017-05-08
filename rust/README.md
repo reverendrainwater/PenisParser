@@ -1,4 +1,4 @@
-#RustyPenis
+# RustyPenis
 
 This implementation of penisparser writen in rust can recognize "words" separated by spaces, tabs and newlines.
 
@@ -6,8 +6,8 @@ You can compile penisparser.rc by running `rustc ./penisparser.rs` and you will 
 
 This binary file is already included, so it should be possible to test this without having to compile it yourself. To test it, just run:
 
-'''
+```
 $ ./penisparser textfile.txt
-'''
+```
 
 and it will print penis for every word in your original textfile, to write it into a file.
