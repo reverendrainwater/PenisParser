@@ -4,3 +4,4 @@
 *.exe
 *.bin
 *.out
+bin/*
