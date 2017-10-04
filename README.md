@@ -1,4 +1,4 @@
 # PenisParser
 ```
-program takes a _text_ file as input then replaces the word with "penis" out for every word found within the file.
+program takes a text file as input then replaces every word with "penis" within the file.
 ```
