@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Penis Parser</title>
+</head>
+<body>
+
+<h1 align="center">Welcome To Penis Parser</h1>
+<h2 align="center">Paste Your Text Below</h2>
+<p align="center"><textarea rows="25" cols="100" id="text">Enter here. </textarea></p>
+
+<p align="center"><button onclick="parsePenis()">Parse</button></p>
+
+<script>
+	function parsePenis(){
+		var text = document.getElementById("text").value;
+		text.replace(/  /g," ");
+		var count = (text.match(/ /g) || []).length;
+		var penisArray = Array(count + 2).join("penis ");
+		document.getElementById("text").value = penisArray;
+		}
+</script>
+</body>
+</html>
